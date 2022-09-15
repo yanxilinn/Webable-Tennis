@@ -2,8 +2,8 @@ Welcome to Webable-Tennis 🎾
 
 
 
-This is a light webpage-tennis-game. User can select to play against computer(1 player mode) or 2-player mode. 
-A small ball will jump on the field, what you have to do is to control your panel, catch the opponent's serve and switch to a tricky angle to fight back. 
+This is a light webpage-tennis-game. User can select 1-player-mode (play against computer) or 2-player mode. 
+A small ball will jump on the field, what you have to do is to control your panel, catch the opponent's ball and switch to a tricky angle to fight back. 
 
 
 
