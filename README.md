@@ -19,7 +19,9 @@ Functionality & MVPs
 
 
 Wireframes
-
+![Screenshot 2022-09-15 at 3 19 05 PM](https://user-images.githubusercontent.com/44556484/190490892-839fef1e-e52a-4487-812c-db09e4cb850a.png)
+🎵 User can mute and unmute background music useing the music bottom 
+👥 User can move mouse up and down, use up and down arrow or "W" and "S" in the keyboard within the play field
 
 Technologies, Libraries, APIs
 
