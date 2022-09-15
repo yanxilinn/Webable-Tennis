@@ -13,11 +13,13 @@ A small ball will jump on the field, what you have to do is to control your pane
 🎾 1-Player-Mode Controls
 - To move up, move mouse up or use up arrow
 - To move down, move mouse down or use down arrow
+
 🎾 2-Player-Mode Controls
 - player 1: - To move up, move mouse up
             - To move down, move mouse down
 - player 2: - To move up, use up arrow or "W"
             - To move down, use down arrow or "S"
+            
 🏆 Score
 - There will be a scorer. Any of user lost one hit, another user will add one point. When any one of the player achieve 5 points, he(she) is winner, and the game stop. 
 
