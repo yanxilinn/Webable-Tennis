@@ -1,4 +1,4 @@
-Welcome to Webable-Tennis 🎾
+## Welcome to Webable-Tennis 🎾
 
 
 
@@ -8,7 +8,7 @@ A small ball will jump on the field, what you have to do is to control your pane
 
 
 
---- Functionality & MVPs ---
+## Functionality & MVPs 
 
 🎾 1-Player-Mode Controls
 - To move up, move mouse up or use up arrow
@@ -26,7 +26,7 @@ A small ball will jump on the field, what you have to do is to control your pane
 
 
 
---- Wireframes ---
+## Wireframes 
 
 ![Screenshot 2022-09-15 at 3 19 05 PM](https://user-images.githubusercontent.com/44556484/190490892-839fef1e-e52a-4487-812c-db09e4cb850a.png)
 
@@ -37,7 +37,7 @@ A small ball will jump on the field, what you have to do is to control your pane
 
 
 
---- Technologies, Libraries, APIs ---
+## Technologies, Libraries, APIs
 
 This project will be implemented with the following technologies:
 - the Canvas API to render the game board 
@@ -46,7 +46,7 @@ This project will be implemented with the following technologies:
 
 
 
---- Implementation Timeline ---
+## Implementation Timeline 
 
 🕐 Friday Afternoon & Weekend: Setup project. Get canvas to show up on the screen, and spend time getting comfortable with the Canvas API. 
 
