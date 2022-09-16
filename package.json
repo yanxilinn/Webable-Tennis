@@ -8,7 +8,7 @@
   ],
   "scripts": {
     "test": "echo \"Error: no test s[ecified\" && exit 1",
-    "watch": "webpack --watch --mode=development",
+    "start": "webpack --watch --mode=development",
     "build": "webpack --mode=production"
   },
   "repository": {

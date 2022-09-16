@@ -5,4 +5,4 @@ document.addEventListener("DOMContentloaded", () => {
     const heading = new Heading("This is a light browser tennis game");
     root.innerHTML = heading.heading; 
 
-}
+})
