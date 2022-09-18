@@ -2,6 +2,28 @@
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss ***!
   \*************************************************************************************************************************************/
 body {
-  background-color: greenyellow;
-  font-family: "Courier New", Courier, monospace;
+ /* background-color: greenyellow;
+  font-family: "Courier New", Courier, monospace; */
+  background: #7e9ef7;
+  font-family: sans-serif;
+  font-size: 2em;
+  text-align: center;
+} 
+
+
+.block{
+  position: absolute;
+  background-color: white;
+  top: 50vh;
+  transform: translateY(-50%);
+  width: 1vh;
+  height: 10vh;
+}
+
+.block.left{
+  left: 1vw;
+}
+
+.block.right{
+  right: 1vw; 
 }
