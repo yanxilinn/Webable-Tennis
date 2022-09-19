@@ -1,3 +1,4 @@
+// const { ContextExclusionPlugin } = require("webpack");
 var canvas = document.getElementById('canvas'); 
 var net = canvas.getContext('2d');
 net.strokeRect(150,0,1,150);
@@ -9,12 +10,12 @@ block_left.strokeRect(2,75,2,20);
 var block_right = canvas.getContext('2d');
 block_right.strokeRect(296, 75,2,20);
 
-var ball=canvas.getContext("2d");
-ball.beginPath();
-ball.arc(50,50,2,0,2*Math.PI);
-ball.fillStyle="white";
-ball.fill();
-ball.stroke();
+// var ball=canvas.getContext("2d");
+// ball.beginPath();
+// ball.arc(50,50,2,0,2*Math.PI);
+// ball.fillStyle="white";
+// ball.fill();
+// ball.stroke();
 
 
 
