@@ -3,24 +3,15 @@
   \*************************************************************************************************************************************/
 body {
   /* background-color: greenyellow;
-   font-family: "Courier New", Courier, monospace; */
-  background: rgb(219, 214, 214);
-  font-family: sans-serif;
+    */
+  background: rgba(219, 214, 214, 0.766);
+  font-family: "Courier New", Courier, monospace;
   font-size: 2em;
 }
 
-.ball {
-  --x: 50;
-  --y: 50;
-  left: calc(var(--x) * 1vm);
-  right: calc(var(--y) * 1vh);
-  position: absolute;
-  background-color: white;
-  top: 30vh;
-  transform: translateY(-50%, -50%);
-  width: 2.5vh;
-  height: 2.5vh;
-  border-radius: 50%;
+canvas {
+  margin-top: 25px;
+  z-index: 20;
 }
 
 .score {

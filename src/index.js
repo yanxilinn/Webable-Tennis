@@ -1,6 +1,10 @@
-import './scripts/ball.js';
+// import './scripts/ball.js';
 import './scripts/canvas.js';
-import './scripts/block.js';
+// import './scripts/block.js';
+
+import Ball from "./scripts/ball.js"
+const ball = new Ball(document.getElementById('ball'))
+
 
 
 

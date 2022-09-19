@@ -8,40 +8,39 @@
     <link rel="stylesheet" href="./dist/main.css" />
     <script src="./dist/main.js"></script>
     <title>Webable-Tennis</title>
-    <canvas id= "canvas" style="width:1000px;height:600px; border: 5px solid rgb(9, 9, 9)"> </canvas>
-    <script src="./src/scripts/canvas.js"></script>
-    <script src="./src/styles/block.scss"></script>
-    <script src="./src/styles/ball.scss"></script>
-
+    <link rel="icon" type="image/png" href="./assests/images/ball.png">
+    
   </head>
 
   <body>
-    <div class="score">
-      <div id="player1-score">0</div>
-      <div id="player2-score">0</div>
-      </div>
-   
-      <div class="ball" id="ball"></div>
-      <div class="block left" id="player1"></div>
-      <div class="block right" id="player2"></div>
-      <h1>Instruction:</h1>
+    <canvas id= "canvas" style="width:1000px;height:600px; border: 5px solid rgb(9, 9, 9)"> </canvas>
+    <script src="./src/scripts/canvas.js"></script>
+    <script src="./src/styles/canvas.scss"></script>
+    
+    <div style="text-align:right;"> 
       <div class="instruction">
-        <div id="player1NameControls">Player 1:</div>
-        <ul>
-          <li>Move mouse up and down within the play field (only in single player)</li>
-          <li>Up Arrow - Move up</li>
-          <li>Down Arrow - Move down</li>
-        </ul>
-        <br />
-        <div id="player2NameControls">Player 2:</div> 
-        <ul>
-          <li>W - Move up</li>
-          <li>S - Move down</li>
-        </ul>
+        <div style="text-align:right;"> 
+        <b><font size=4>Instruction:</font></b><br>
+          <font size=3>Player 1:</font><br>
+          <font size=2>▪️ Move mouse up and down within the play field (only in single player)</font><br>
+          <font size=2>▪️ Up Arrow - Move up</font> <br>
+          <font size=2>▪️ Down Arrow - Move down</font><br>
+          <font size=3>Player 2:</font><br>
+          <font size=2>▪️ W - Move up</font><br>
+          <font size=2>▪️ S - Move down</font><br>
       </div> 
+    </div>
+    </div>
 
-
+    
+   
+    </div>
   </body>
+
+    
+
+
+ 
 
 </html>
 
