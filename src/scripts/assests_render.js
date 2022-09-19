@@ -3,6 +3,7 @@ var ballPic = new Image();
 
 var imagesToLoad = 0;
 
+
 function loadImageForTileCode(tileCode, fileName) {
   tilePics[tileCode] = new Image();
   beginLoadingImage(tilePics[tileCode], fileName);
