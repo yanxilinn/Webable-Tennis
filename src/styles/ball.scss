@@ -1,0 +1,13 @@
+.ball{
+    --x: 50;
+    --y: 50;
+    left: calc(var(--x) * 1vm);
+    right: calc(var(--y) * 1vh); 
+    position: absolute;
+    background-color: white;
+    top: 30vh;
+    transform: translateY(-50%, -50%);
+    width: 2.5vh;
+    height: 2.5vh;
+    border-radius: 50%;
+  }

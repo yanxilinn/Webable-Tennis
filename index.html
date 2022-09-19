@@ -8,19 +8,23 @@
     <link rel="stylesheet" href="./dist/main.css" />
     <script src="./dist/main.js"></script>
     <title>Webable-Tennis</title>
+    <canvas id= "canvas" style="width:1000px;height:600px; border: 5px solid rgb(9, 9, 9)"> </canvas>
+    <script src="./src/scripts/canvas.js"></script>
+    <script src="./src/styles/block.scss"></script>
+    <script src="./src/styles/ball.scss"></script>
+
   </head>
 
   <body>
-    <h1>Webable-Tennis</h1>
-    <div id="root"></div>
     <div class="score">
       <div id="player1-score">0</div>
       <div id="player2-score">0</div>
       </div>
+   
       <div class="ball" id="ball"></div>
       <div class="block left" id="player1"></div>
       <div class="block right" id="player2"></div>
-      <h3>Instruction:</h3>
+      <h1>Instruction:</h1>
       <div class="instruction">
         <div id="player1NameControls">Player 1:</div>
         <ul>
@@ -34,7 +38,7 @@
           <li>W - Move up</li>
           <li>S - Move down</li>
         </ul>
-      </div>
+      </div> 
 
 
   </body>
