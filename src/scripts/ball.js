@@ -1,5 +1,9 @@
-var canvas = document.getElementById("canvas"); 
-var ctx = canvas.getContext("2d");
+const canvas = document.getElementById("canvas"); 
+const ctx = canvas.getContext("2d");
+let leftScore = 0;
+let rightScore = 0;
+ctx.font = '50px serif';
+ctx.fillText("hello", 50, 90);
 
 var ball = {
     x: 500,
@@ -21,25 +25,48 @@ ball.move = function(){
 };
 
 ball.checkCanvas = function(){
-    // if(this.x < 0 || this.x >1000)
-    // this.xSpeed = -this.xSpeed;
-    // if(this.y<0 || this.y >600)
-    // this.ySpeed = -this.ySpeed;
     if ((this.x >= 990 || this.x <= 10) && (this.y >= (panelLeft.y) && this.y <= (panelLeft.y + 100))) {
         this.xSpeed = -this.xSpeed;
     }
-    // console.log(panelRight.y)
+ 
     if ((this.x >= 990 || this.x <= 10) && (this.y >= (panelRight.y) && this.y <= (panelRight.y + 100))) {
         this.xSpeed = -this.xSpeed;
     }
     if((this.y <= 0 || this.y >= 600) && (this.x > 0 || this.x < 1000)) {
         this.ySpeed = -this.ySpeed;
-        // this.xSpeed = -this.xSpeed;
     }
-    if(this.x < 0 || this.x > 1000){
-        alert("Game over!");
+
+    if(this.x< 0 && rightScore < 5){
+        rightScore += 1;
         this.x = 500;
         this.y = 300; 
+        this.xSpeed = this.xSpeed * (-1.2);
+        this.ySpeed = this.ySpeed * (-1.2);  
+    }
+    if(this.x> 1000 && leftScore < 5){
+        leftScore += 1;
+        this.x = 500;
+        this.y = 300; 
+        this.xSpeed = this.xSpeed * (-1.2);
+        this.ySpeed = this.ySpeed * (-1.2); 
+    }
+    if(rightScore === 5){
+        alert("Right Player Win!!!");
+        this.x = 500;
+        this.y = 300; 
+        rightScore = 0;
+        leftScore = 0; 
+        this.xSpeed = -1,
+        this.ySpeed = -2;
+    }
+    if(leftScore === 5){
+        alert("Left Player Win!!!");
+        this.x = 500;
+        this.y = 300; 
+        rightScore = 0;
+        leftScore = 0;
+        this.xSpeed = -1,
+        this.ySpeed = -2;
     }
 };
 
@@ -53,6 +80,7 @@ setInterval(function(){
     ball.checkCanvas();
     ctx.strokeRect(0,0,1000,600);
 },5);
+
 
 var panelLeft = {
     x: 0,
@@ -114,6 +142,7 @@ $("body").keydown(function(event){
         panelRight.y = 600-panelRight.ySize;
     }
 }); 
+
 
 
 
