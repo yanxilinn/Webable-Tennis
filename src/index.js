@@ -1,5 +1,5 @@
 import './scripts/ball.js';
-import './scripts/canvas.js';
+// import './scripts/canvas.js';
 // import './scripts/block.js';
 
 

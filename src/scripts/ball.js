@@ -2,16 +2,17 @@ var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 
 var ball = {
-    x: 100,
-    y: 100,
-    xSpeed: -2,
+    x: 500,
+    y: 300,
+    xSpeed: -1,
     ySpeed: -2
 };
 
 ball.draw = function(){
     ctx.beginPath();
-    ctx.arc(this.x, this.y, 10, 0, Math.PI*2, false);
+    ctx.arc(this.x, this.y, 16, 0, Math.PI*2);
     ctx.fill();
+    ctx.closePath();
 };
 
 ball.move = function(){
@@ -20,10 +21,26 @@ ball.move = function(){
 };
 
 ball.checkCanvas = function(){
-    if(this.x < 0 || this.x >1000)
-    this.xSpeed = -this.xSpeed;
-    if(this.y<0 || this.y >600)
-    this.ySpeed = -this.ySpeed;
+    // if(this.x < 0 || this.x >1000)
+    // this.xSpeed = -this.xSpeed;
+    // if(this.y<0 || this.y >600)
+    // this.ySpeed = -this.ySpeed;
+    if ((this.x >= 990 || this.x <= 10) && (this.y >= (panelLeft.y) && this.y <= (panelLeft.y + 100))) {
+        this.xSpeed = -this.xSpeed;
+    }
+    // console.log(panelRight.y)
+    if ((this.x >= 990 || this.x <= 10) && (this.y >= (panelRight.y) && this.y <= (panelRight.y + 100))) {
+        this.xSpeed = -this.xSpeed;
+    }
+    if((this.y <= 0 || this.y >= 600) && (this.x > 0 || this.x < 1000)) {
+        this.ySpeed = -this.ySpeed;
+        // this.xSpeed = -this.xSpeed;
+    }
+    if(this.x < 0 || this.x > 1000){
+        alert("Game over!");
+        this.x = 500;
+        this.y = 300; 
+    }
 };
 
 setInterval(function(){
@@ -35,20 +52,20 @@ setInterval(function(){
     ball.move();
     ball.checkCanvas();
     ctx.strokeRect(0,0,1000,600);
-},3);
+},5);
 
 var panelLeft = {
-    x: 10,
-    y: 200,
+    x: 0,
+    y: 300,
     xSzie: 10,
-    ySize: 80
+    ySize: 100
 };
 
 var panelRight = {
-    x: 980,
-    y: 200,
+    x: 990,
+    y: 300,
     xSzie: 10,
-    ySize: 80
+    ySize: 100
 };
 
 var net = {
@@ -69,6 +86,36 @@ panelRight.draw = function(){
 net.draw = function(){
     ctx.fillRect(this.x, this.y, this.xSzie, this.ySize);
 };
+
+$("body").keydown(function(event){
+    console.log(event.keyCode);
+    if (event.keyCode === 87)
+    {
+        panelLeft.y = panelLeft.y-80;
+        if(panelLeft.y<0)
+        panelLeft.y=0;
+    }
+    if (event.keyCode == 83)
+    {
+        panelLeft.y = panelLeft.y +80;
+        if(panelLeft.y > 600-panelLeft.ySize)
+        panelLeft.y = 600-panelLeft.ySize;
+    }
+    if (event.keyCode == 38)
+    {
+        panelRight.y = panelRight.y-80;
+        if(panelRight.y<0)
+        panelRight.y=0;
+    }
+    if (event.keyCode == 40)
+    {
+        panelRight.y = panelRight.y +80;
+        if(panelRight.y > 600-panelRight.ySize)
+        panelRight.y = 600-panelRight.ySize;
+    }
+}); 
+
+
 
 
 
