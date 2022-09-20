@@ -10,8 +10,8 @@ var ball = {
 };
 
 ball.draw = function(){
-    ctx.beginPatch();
-    ctx.arc(this.x, this.y, 10, 0, Math.PI*2, false);
+    ctx.beginPath();
+    ctx.arc(this.x, this.y, 5, 0, Math.PI*2, false);
     ctx.fill();
 };
 
@@ -20,11 +20,20 @@ ball.move = function(){
     this.y = this.y + this.ySpeed; 
 };
 
+ball.checkCanvas = function(){
+    if(this.x <0 || this.x >100)
+    this.xSpeed =-this.xSpeed;
+    if(this.y<0 || this.y >100)
+    this.ySpeed =-this.ySpeed;
+};
+
 setInterval(function(){
-    ctx.clearRect(0, 0, 400, 400);
+    ctx.clearRect(0, 0, 300, 150);
     ball.draw();
     ball.move();
-    ctx.strokeRect(0,0,400,400);
-},30);
+    ctx.strokeRect(0,0,300,150);
+},3);
+
+
 
 

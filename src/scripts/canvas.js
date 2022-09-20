@@ -2,7 +2,7 @@
 var canvas = document.getElementById('canvas'); 
 var net = canvas.getContext('2d');
 net.strokeRect(150,0,1,150);
-net.fillStyle="#ffffff";
+net.fillStyle="black";
 
 var block_left = canvas.getContext('2d');
 block_left.strokeRect(2,75,2,20);
