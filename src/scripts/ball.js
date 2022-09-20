@@ -21,17 +21,18 @@ ball.move = function(){
 };
 
 ball.checkCanvas = function(){
-    if(this.x <0 || this.x >100)
+    if(this.x <0 || this.x >1000)
     this.xSpeed =-this.xSpeed;
-    if(this.y<0 || this.y >100)
+    if(this.y<0 || this.y >600)
     this.ySpeed =-this.ySpeed;
 };
 
 setInterval(function(){
-    ctx.clearRect(0, 0, 300, 150);
+    ctx.clearRect(0, 0, 1000, 600);
     ball.draw();
     ball.move();
-    ctx.strokeRect(0,0,300,150);
+    ball.checkCanvas();
+    ctx.strokeRect(0,0,1000,600);
 },3);
 
 

@@ -8,6 +8,11 @@ body {
   background-size: 100% 100%;
   font-family: "Courier New", Courier, monospace;
   font-size: 2em;
+  display: flex;
+  align-items: center;
+  width: 1000;
+  height: 800;
+  text-align: center;
 }
 
 canvas {
