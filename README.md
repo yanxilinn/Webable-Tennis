@@ -43,6 +43,7 @@ A small ball will jump on the field, what you have to do is to control your pane
 This project will be implemented with the following technologies:
 - the Canvas API to render the game board 
 - Webpack and Babel to bundle and transpile the source JavaScript code
+- the jQuery to complete the keyboard interaction
 
 
 
