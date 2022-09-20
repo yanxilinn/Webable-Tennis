@@ -4,12 +4,13 @@
 body {
   /* background-color: greenyellow;
     */
-  background: rgba(145, 187, 233, 0.936);
+  background-image: url("/assests/images/720.jpeg");
+  background-size: 100% 100%;
   font-family: "Courier New", Courier, monospace;
   font-size: 2em;
 }
 
 canvas {
   margin-top: 25px;
-  z-index: 20;
+  z-index: 10;
 }
