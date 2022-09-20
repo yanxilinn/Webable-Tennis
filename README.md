@@ -28,7 +28,8 @@ A small ball will jump on the field, what you have to do is to control your pane
 
 ## Wireframes 
 
-![Screenshot 2022-09-15 at 3 19 05 PM](https://user-images.githubusercontent.com/44556484/190490892-839fef1e-e52a-4487-812c-db09e4cb850a.png)
+![image](https://user-images.githubusercontent.com/44556484/191284632-1660e75e-c441-463b-9134-e7df0b0dd4b2.png)
+
 
 🎵 User can mute or unmute background music using the music buttom
 
