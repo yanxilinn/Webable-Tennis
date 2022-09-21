@@ -19,6 +19,27 @@ body {
   margin-left: 50px;
 }
 
+img:hover {
+  animation: 0.3s infinite alternate scales;
+}
+
+@keyframes scales {
+  10% {
+    transform: scale(1.01);
+  }
+  30% {
+    transform: scale(1.03);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(1.07);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
 canvas {
   margin-top: 25px;
   z-index: 10;
