@@ -3,7 +3,7 @@ const ctx = canvas.getContext("2d");
 let leftScore = 0;
 let rightScore = 0;
 ctx.font = '50px serif';
-ctx.fillText("hello", 50, 90);
+
 
 var ball = {
     x: 500,
@@ -71,6 +71,9 @@ ball.checkCanvas = function(){
 };
 
 setInterval(function(){
+    // ctx.fillText(leftScore, 50, 90);
+    // ctx.fillText(rightScore, 50, 90);
+    ctx.fillText("hello", 50, 90);
     ctx.clearRect(0, 0, 1000, 600);
     net.draw();
     ball.draw();
@@ -104,10 +107,14 @@ var net = {
 };
 
 panelLeft.draw = function(){
+    // ctx.font = '50px serif';
+    ctx.fillText(leftScore, 450, 50);
     ctx.fillRect(this.x, this.y, this.xSzie, this.ySize);
 };
 
 panelRight.draw = function(){
+    // ctx.font = '50px serif';
+    ctx.fillText(rightScore, 530, 50);
     ctx.fillRect(this.x, this.y, this.xSzie, this.ySize);
 };
 
