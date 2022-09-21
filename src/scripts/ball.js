@@ -1,11 +1,12 @@
 
-
+// setTimeout(() => {
 const canvas = document.getElementById("canvas"); 
 const ctx = canvas.getContext("2d");
+ctx.fillStyle = 'black';
+ctx.font = '50px serif';
 let leftScore = 0;
 let rightScore = 0;
-ctx.font = '50px serif';
-gameOver = false; 
+// gameOver = false; 
 
 
 var ball = {
@@ -55,7 +56,7 @@ ball.checkCanvas = function(){
     }
     if(rightScore === 5){
         alert("Right Player Win!!!");
-        gameOver = true; 
+        // gameOver = true; 
         this.x = 500;
         this.y = 300; 
         rightScore = 0;
@@ -65,7 +66,7 @@ ball.checkCanvas = function(){
     }
     if(leftScore === 5){
         alert("Left Player Win!!!");
-        gameOver = true; 
+        // gameOver = true; 
         this.x = 500;
         this.y = 300; 
         rightScore = 0;
@@ -75,19 +76,19 @@ ball.checkCanvas = function(){
     }
 };
 
-setInterval(function(){
-    // ctx.fillText(leftScore, 50, 90);
-    // ctx.fillText(rightScore, 50, 90);
-    // ctx.fillText("hello", 50, 90);
-    ctx.clearRect(0, 0, 1000, 600);
-    net.draw();
-    ball.draw();
-    panelLeft.draw();
-    panelRight.draw();
-    ball.move();
-    ball.checkCanvas();
-    ctx.strokeRect(0,0,1000,600);
-},1);
+function play () {
+    setInterval(function(){
+        ctx.clearRect(0, 0, 1000, 600);
+        net.draw();
+        ball.draw();
+        panelLeft.draw();
+        panelRight.draw();
+        ball.move();
+        ball.checkCanvas();
+        ctx.strokeRect(0,0,1000,600);
+    },1);
+}
+
 
 
 var panelLeft = {
@@ -128,7 +129,7 @@ net.draw = function(){
 };
 
 $("body").keydown(function(event){
-    console.log(event.keyCode);
+    // console.log(event.keyCode);
     if (event.keyCode === 87)
     {
         panelLeft.y = panelLeft.y-80;
@@ -155,8 +156,20 @@ $("body").keydown(function(event){
     }
 }); 
 
+// }, 200)
 
+// welcome.draw = function(){
+//     ctx.fillText("HI")
+// };
+ctx.fillStyle = 'black';
+ctx.font = '50px serif';
+ctx.fillText("Press SPACE to Start", 300, 300, 500);
 
-
+document.addEventListener('keydown', (e) => {
+    // welcome.draw();
+    if (e.key === ' '){
+        play();
+    }
+})
 
 
