@@ -7,12 +7,16 @@ body {
   background-image: url("/assests/images/background.png");
   max-width: 100%;
   max-height: 100%;
-  background-size: 100% 125%;
+  background-size: 100% 135%;
   font-family: "Courier New", Courier, monospace;
   font-size: 2em;
   display: flex;
   align-items: center;
   text-align: center;
+}
+
+#quick {
+  margin-left: 50px;
 }
 
 canvas {
