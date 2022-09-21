@@ -1,13 +1,9 @@
-
-// setTimeout(() => {
 const canvas = document.getElementById("canvas"); 
 const ctx = canvas.getContext("2d");
 ctx.fillStyle = 'black';
 ctx.font = '50px serif';
 let leftScore = 0;
 let rightScore = 0;
-// gameOver = false; 
-
 
 var ball = {
     x: 500,
@@ -56,7 +52,6 @@ ball.checkCanvas = function(){
     }
     if(rightScore === 5){
         alert("Right Player Win!!!");
-        // gameOver = true; 
         this.x = 500;
         this.y = 300; 
         rightScore = 0;
@@ -66,7 +61,6 @@ ball.checkCanvas = function(){
     }
     if(leftScore === 5){
         alert("Left Player Win!!!");
-        // gameOver = true; 
         this.x = 500;
         this.y = 300; 
         rightScore = 0;
@@ -113,13 +107,11 @@ var net = {
 };
 
 panelLeft.draw = function(){
-    // ctx.font = '50px serif';
     ctx.fillText(leftScore, 450, 50);
     ctx.fillRect(this.x, this.y, this.xSzie, this.ySize);
 };
 
 panelRight.draw = function(){
-    // ctx.font = '50px serif';
     ctx.fillText(rightScore, 530, 50);
     ctx.fillRect(this.x, this.y, this.xSzie, this.ySize);
 };
@@ -129,7 +121,6 @@ net.draw = function(){
 };
 
 $("body").keydown(function(event){
-    // console.log(event.keyCode);
     if (event.keyCode === 87)
     {
         panelLeft.y = panelLeft.y-80;
@@ -156,17 +147,11 @@ $("body").keydown(function(event){
     }
 }); 
 
-// }, 200)
-
-// welcome.draw = function(){
-//     ctx.fillText("HI")
-// };
 ctx.fillStyle = 'black';
 ctx.font = '50px serif';
 ctx.fillText("Press SPACE to Start", 300, 300, 500);
 
 document.addEventListener('keydown', (e) => {
-    // welcome.draw();
     if (e.key === ' '){
         play();
     }
