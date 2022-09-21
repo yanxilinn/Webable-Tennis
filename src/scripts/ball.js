@@ -1,8 +1,11 @@
+
+
 const canvas = document.getElementById("canvas"); 
 const ctx = canvas.getContext("2d");
 let leftScore = 0;
 let rightScore = 0;
 ctx.font = '50px serif';
+gameOver = false; 
 
 
 var ball = {
@@ -52,6 +55,7 @@ ball.checkCanvas = function(){
     }
     if(rightScore === 5){
         alert("Right Player Win!!!");
+        gameOver = true; 
         this.x = 500;
         this.y = 300; 
         rightScore = 0;
@@ -61,6 +65,7 @@ ball.checkCanvas = function(){
     }
     if(leftScore === 5){
         alert("Left Player Win!!!");
+        gameOver = true; 
         this.x = 500;
         this.y = 300; 
         rightScore = 0;
@@ -73,7 +78,7 @@ ball.checkCanvas = function(){
 setInterval(function(){
     // ctx.fillText(leftScore, 50, 90);
     // ctx.fillText(rightScore, 50, 90);
-    ctx.fillText("hello", 50, 90);
+    // ctx.fillText("hello", 50, 90);
     ctx.clearRect(0, 0, 1000, 600);
     net.draw();
     ball.draw();
@@ -82,7 +87,7 @@ setInterval(function(){
     ball.move();
     ball.checkCanvas();
     ctx.strokeRect(0,0,1000,600);
-},5);
+},1);
 
 
 var panelLeft = {
