@@ -25,15 +25,17 @@ A small ball will jump on the field, what you have to do is to control your pane
 
 ![image](https://user-images.githubusercontent.com/44556484/191766354-723b0d0c-1d2d-41c7-8492-26f184cec8e6.png)
 
+
+
 ![gif](https://user-images.githubusercontent.com/44556484/191767821-27a2ff05-c209-49d3-9843-027715ec9d59.gif)
 
 
 
 
 
-🎵 User can mute or unmute background music using the music buttom, music will aotoplay when you open the page
+🎵 User can mute or unmute background music using the music button, music will aotoplay when you open the page
 
-👥 User can move mouse up and down, use up and down arrow or "W" and "S" in the keyboard within the play field
+👥 User can move mouse up and down, use up and down arrow or "W" and "S" in the keyboard
 
 ⌚️ Timer will autostart when you open the page
 
@@ -42,7 +44,7 @@ A small ball will jump on the field, what you have to do is to control your pane
 
 This project will be implemented with the following technologies:
 - the Canvas API to render the game board 
-- Webpack and Babel to bundle and transpile the source JavaScript code
+- Webpack to bundle and transpile the source JavaScript code
 - the jQuery to complete the keyboard interaction
 
 
