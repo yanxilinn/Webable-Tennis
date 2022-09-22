@@ -1,8 +1,9 @@
 ## Welcome to Webable-Tennis 🎾
 
+Play Here 👉 https://yanxilinn.github.io/Webable-Tennis/
 
 
-This is a light webpage-tennis-game. User can select 1-player-mode (play against computer) or 2-player mode. 
+This is a light webpage-tennis-game. 
 A small ball will jump on the field, what you have to do is to control your panel, catch the opponent's ball and switch to a tricky angle to fight back. 
 
 
@@ -15,27 +16,29 @@ A small ball will jump on the field, what you have to do is to control your pane
 - To move down, move mouse down or use down arrow
 
 🎾 2-Player-Mode Controls
-- player 1: - To move up, move mouse up
-            - To move down, move mouse down
-- player 2: - To move up, use up arrow or "W"
-            - To move down, use down arrow or "S"
+- Left player: - To move up, use "w"
+               - To move down, use "s"
+- Right player: - To move up, use up arrow
+                - To move down, use down arrow
             
 🏆 Score
-- There will be a scorer. Any of user lost one hit, another user will add one point. When any one of the player achieve 5 points, he(she) is winner, and the game stop. 
+- There will be a scorer. Any of user lost one hit, another user will add one point. There are 3 rounds, when all rounds end, the game stop. 
+
+
+##
+
+<img width="1470" alt="Screenshot 2022-09-22 at 9 44 52 AM" src="https://user-images.githubusercontent.com/44556484/191764786-1a99d63b-dd46-4256-b96f-35cd36fd45db.png">
+
+<img width="1470" alt="Screenshot 2022-09-22 at 9 45 00 AM" src="https://user-images.githubusercontent.com/44556484/191764813-5a7305a6-1a03-4e01-a66b-b80d8920bc92.png">
 
 
 
 
-## Wireframes 
-
-![image](https://user-images.githubusercontent.com/44556484/191284632-1660e75e-c441-463b-9134-e7df0b0dd4b2.png)
-
-
-🎵 User can mute or unmute background music using the music buttom
+🎵 User can mute or unmute background music using the music buttom, music will aotoplay when you open the page
 
 👥 User can move mouse up and down, use up and down arrow or "W" and "S" in the keyboard within the play field
 
-
+⌚️ Timer will autostart when you open the page
 
 
 ## Technologies, Libraries, APIs
@@ -48,14 +51,11 @@ This project will be implemented with the following technologies:
 
 
 
-## Implementation Timeline 
+## Future Features 
 
-🕐 Friday Afternoon & Weekend: Setup project. Get canvas to show up on the screen, and spend time getting comfortable with the Canvas API. 
+🕐 Change the img of panels and ball to local assets 
 
-🕐 Monday: Ensure that I can advance a generation and all the cells update appropriately. If time, make sure this is all rendered correctly on the canvas.
+🕐 Add a 1-player mode
 
-🕐 Tuesday: If I didn't get to it already, get the cells correctly rendered to the canvas. Make sure they rerender correctly when I advance a generation. Then, focus on user controls. 
+🕐 Add more animations
 
-🕐 Wednesday: Finish implementing user controls, and focus on styling, as well as implementing the different color schemes and nav links. 
-
-🕐 Thursday Morning: Fix bugs and deploy to GitHub pages.
