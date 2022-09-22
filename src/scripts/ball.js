@@ -27,11 +27,11 @@ ball.move = function(){
 };
 
 ball.checkCanvas = function(){
-    if ((this.x >= 990 || this.x <= 10) && (this.y >= (panelLeft.y) && this.y <= (panelLeft.y + 100))) {
+    if ((this.x == 5) && (this.y >= (panelLeft.y) && this.y <= (panelLeft.y + 100))) {
         this.xSpeed = -this.xSpeed;
     }
  
-    if ((this.x >= 990 || this.x <= 10) && (this.y >= (panelRight.y) && this.y <= (panelRight.y +100))) {
+    if ((this.x == 1000 ) && (this.y >= (panelRight.y) && this.y <= (panelRight.y +100))) {
         this.xSpeed = -this.xSpeed;
     }
     if((this.y <= 0 || this.y >= 600) && (this.x > 0 || this.x < 1000)) {
@@ -42,20 +42,20 @@ ball.checkCanvas = function(){
         rightScore += 1;
         this.x = 500;
         this.y = 300; 
-        this.xSpeed = this.xSpeed ;
-        this.ySpeed = this.ySpeed ;  
+        this.xSpeed = -1 ;
+        this.ySpeed = -2 ;  
     }
     if(this.x> 1000 && leftScore < 5){
         leftScore += 1;
         this.x = 500;
         this.y = 300; 
-        this.xSpeed = this.xSpeed ;
-        this.ySpeed = this.ySpeed ; 
+        this.xSpeed = -1 ;
+        this.ySpeed = -2 ; 
     }
     if(rightScore === 5){
         round += 1; 
         winner += 1;
-        if (round == 4 && winner > 0){alert("Right Player Win!!!");round = 0; }
+        if (round == 4 && winner > 0){alert("Right Player Win!!!");round = 1; }
         this.x = 500;
         this.y = 300; 
         rightScore = 0;
@@ -67,7 +67,7 @@ ball.checkCanvas = function(){
     if(leftScore === 5){
         round += 1; 
         winner -=1; 
-        if (round == 4 && winner < 0){alert("Left Player Win!!!");round = 0; }
+        if (round == 4 && winner < 0){alert("Left Player Win!!!");round = 1; }
         this.x = 500;
         this.y = 300; 
         rightScore = 0;
