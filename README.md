@@ -11,10 +11,6 @@ A small ball will jump on the field, what you have to do is to control your pane
 
 ## Functionality & MVPs 
 
-🎾 1-Player-Mode Controls
-- To move up, move mouse up or use up arrow
-- To move down, move mouse down or use down arrow
-
 🎾 2-Player-Mode Controls
 - Left player: - To move up, use "w"
                - To move down, use "s"
