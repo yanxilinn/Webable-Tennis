@@ -27,9 +27,10 @@ A small ball will jump on the field, what you have to do is to control your pane
 
 ##
 
-<img width="1470" alt="Screenshot 2022-09-22 at 9 44 52 AM" src="https://user-images.githubusercontent.com/44556484/191764786-1a99d63b-dd46-4256-b96f-35cd36fd45db.png">
+![image](https://user-images.githubusercontent.com/44556484/191766354-723b0d0c-1d2d-41c7-8492-26f184cec8e6.png)
 
-<img width="1470" alt="Screenshot 2022-09-22 at 9 45 00 AM" src="https://user-images.githubusercontent.com/44556484/191764813-5a7305a6-1a03-4e01-a66b-b80d8920bc92.png">
+![gif](https://user-images.githubusercontent.com/44556484/191767821-27a2ff05-c209-49d3-9843-027715ec9d59.gif)
+
 
 
 
