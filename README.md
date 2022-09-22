@@ -33,7 +33,7 @@ A small ball will jump on the field, what you have to do is to control your pane
 
 
 
-🎵 User can mute or unmute background music using the music button, music will aotoplay when you open the page
+🎵 User can mute or unmute background music using the music button, music will autoplay when you open the page
 
 👥 User can move mouse up and down, use up and down arrow or "W" and "S" in the keyboard
 
