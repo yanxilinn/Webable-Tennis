@@ -1,21 +1,15 @@
 // const { ContextExclusionPlugin } = require("webpack");
 body {
-    /* background-color: greenyellow;
-      */
-    //  background: rgba(214, 225, 236, 0.963);
+
      background-image: url('https://raw.githubusercontent.com/yanxilinn/Webable-Tennis/main/assests/images/background.png');
-    //  background-image: url(('/assests/images/background.png');)
 
      max-width:100%;
      max-height:100%;
      background-size:100% 135%;
-    // background-size: cover;
      font-family: "Courier New", Courier, monospace;
      font-size: 2em;
      display: flex;
      align-items: center;
-    //  margin-top: 100%;
-    //  margin-left: 100%;
      text-align: center;
    } 
 
@@ -36,8 +30,6 @@ img:hover {
 }
 
 canvas{
-    // background-image: url('/assests/images/bg.png');
-    // background-size:100% 100%;
     margin-top: 25px;
     z-index: 10;
     

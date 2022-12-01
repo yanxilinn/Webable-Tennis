@@ -50,11 +50,96 @@ This project will be implemented with the following technologies:
 
 
 
-## Future Features 
+## Code Snippets
 
-🕐 Change the img of panels and ball to local assets 
+```javascript
+   $("body").keydown(function(event){
+    if (event.keyCode === 87)
+    {
+        panelLeft.y = panelLeft.y-80;
+        if(panelLeft.y<0)
+        panelLeft.y=0;
+    }
+    if (event.keyCode == 83)
+    {
+        panelLeft.y = panelLeft.y +80;
+        if(panelLeft.y > 600-panelLeft.ySize)
+        panelLeft.y = 600-panelLeft.ySize;
+    }
+    if (event.keyCode == 38)
+    {
+        panelRight.y = panelRight.y-80;
+        if(panelRight.y<0)
+        panelRight.y=0;
+    }
+    if (event.keyCode == 40)
+    {
+        panelRight.y = panelRight.y +80;
+        if(panelRight.y > 600-panelRight.ySize)
+        panelRight.y = 600-panelRight.ySize;
+    }
+}); 
 
-🕐 Add a 1-player mode
+document.addEventListener('keydown', (e) => {
+    if (e.key === ' '){
+        play();
+    }
+})
 
-🕐 Add more animations
+```
+Use jQuery binds event listener to complete keyboard interaction.
 
+
+```javascript
+ball.checkCanvas = function(){
+    if ((this.x == 5) && (this.y >= (panelLeft.y) && this.y <= (panelLeft.y + 100))) {
+        this.xSpeed = -this.xSpeed;
+    }
+ 
+    if ((this.x == 1000 ) && (this.y >= (panelRight.y) && this.y <= (panelRight.y +100))) {
+        this.xSpeed = -this.xSpeed;
+    }
+    if((this.y <= 0 || this.y >= 600) && (this.x > 0 || this.x < 1000)) {
+        this.ySpeed = -this.ySpeed;
+    }
+
+    if(this.x< 0 && rightScore < 5){
+        rightScore += 1;
+        this.x = 500;
+        this.y = 300; 
+        this.xSpeed = -1 ;
+        this.ySpeed = -2 ;  
+    }
+    if(this.x> 1000 && leftScore < 5){
+        leftScore += 1;
+        this.x = 500;
+        this.y = 300; 
+        this.xSpeed = -1 ;
+        this.ySpeed = -2 ; 
+    }
+    if(rightScore === 5){
+        round += 1; 
+        winner += 1;
+        if (round == 4 && winner > 0){alert("Right Player Win!!!");round = 1; }
+        this.x = 500;
+        this.y = 300; 
+        rightScore = 0;
+        leftScore = 0; 
+        this.xSpeed = -1,
+        this.ySpeed = -2;  
+    }
+
+    if(leftScore === 5){
+        round += 1; 
+        winner -=1; 
+        if (round == 4 && winner < 0){alert("Left Player Win!!!");round = 1; }
+        this.x = 500;
+        this.y = 300; 
+        rightScore = 0;
+        leftScore = 0;
+        this.xSpeed = -1,
+        this.ySpeed = -2;
+    }
+};
+```
+Determine the wins or loses based on the coordinates on Canvas.

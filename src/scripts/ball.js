@@ -6,12 +6,13 @@ let leftScore = 0;
 let rightScore = 0;
 let round = 1; 
 let winner = 0; 
+const arr = [-2,-1,1,2]
 
 var ball = {
     x: 500,
-    y: 300,
+    y: 200,
     xSpeed: -1,
-    ySpeed: -2
+    ySpeed: 2
 };
 
 ball.draw = function(){
@@ -39,20 +40,26 @@ ball.checkCanvas = function(){
     }
 
     if(this.x< 0 && rightScore < 5){
+        var newX = arr[Math.floor((Math.random()*arr.length))]; 
+        var newY = arr[Math.floor((Math.random()*arr.length))]; 
         rightScore += 1;
         this.x = 500;
         this.y = 300; 
-        this.xSpeed = -1 ;
-        this.ySpeed = -2 ;  
+        this.xSpeed = newX ;
+        this.ySpeed = newY ;  
     }
     if(this.x> 1000 && leftScore < 5){
+        var newX = arr[Math.floor((Math.random()*arr.length))]; 
+        var newY = arr[Math.floor((Math.random()*arr.length))]; 
         leftScore += 1;
         this.x = 500;
         this.y = 300; 
-        this.xSpeed = -1 ;
-        this.ySpeed = -2 ; 
+        this.xSpeed = newX ;
+        this.ySpeed = newY ; 
     }
     if(rightScore === 5){
+        var newX = arr[Math.floor((Math.random()*arr.length))]; 
+        var newY = arr[Math.floor((Math.random()*arr.length))]; 
         round += 1; 
         winner += 1;
         if (round == 4 && winner > 0){alert("Right Player Win!!!");round = 1; }
@@ -60,11 +67,13 @@ ball.checkCanvas = function(){
         this.y = 300; 
         rightScore = 0;
         leftScore = 0; 
-        this.xSpeed = -1,
-        this.ySpeed = -2;  
+        this.xSpeed = newX,
+        this.ySpeed = newY;  
     }
 
     if(leftScore === 5){
+        var newX = arr[Math.floor((Math.random()*arr.length))]; 
+        var newY = arr[Math.floor((Math.random()*arr.length))]; 
         round += 1; 
         winner -=1; 
         if (round == 4 && winner < 0){alert("Left Player Win!!!");round = 1; }
@@ -72,8 +81,8 @@ ball.checkCanvas = function(){
         this.y = 300; 
         rightScore = 0;
         leftScore = 0;
-        this.xSpeed = -1,
-        this.ySpeed = -2;
+        this.xSpeed = newX,
+        this.ySpeed = newY;
     }
 };
 
